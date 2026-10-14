@@ -47,6 +47,7 @@ export function EconomicsCalculator({
 
   useEffect(() => {
     setCosts(defaultCosts(residue, buyer));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [residue.id, buyer.id]);
 
   const econ = useMemo(() => economicsFor(residue, buyer, costs), [residue, buyer, costs]);
@@ -131,7 +132,7 @@ export function EconomicsCalculator({
         </p>
       ) : (
         <p className="mt-2 text-meta text-ink-muted">
-          Indicative net proceeds are not necessarily profit; compare against the farmer's real
+          Indicative net proceeds are not necessarily profit; compare against the farmer&apos;s real
           alternative.
         </p>
       )}

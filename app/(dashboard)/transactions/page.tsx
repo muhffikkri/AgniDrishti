@@ -15,8 +15,8 @@ export default function TransactionsPage() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [filter, setFilter] = useState<"all" | "active" | "closed">("all");
 
-  const closed: TransactionStatus[] = ["Completed", "Rejected", "Cancelled"];
   const rows = useMemo(() => {
+    const closed: TransactionStatus[] = ["Completed", "Rejected", "Cancelled"];
     if (filter === "active") return state.transactions.filter((t) => !closed.includes(t.status));
     if (filter === "closed") return state.transactions.filter((t) => closed.includes(t.status));
     return state.transactions;

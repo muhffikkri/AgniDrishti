@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Manrope, DM_Sans } from "next/font/google";
 import "./globals.css";
+
+const heading = Manrope({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-heading",
+  display: "swap",
+});
+
+const body = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "AgniDrishti — Jerami Jadi Rupiah",
@@ -13,19 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Manrope:wght@600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${heading.variable} ${body.variable}`}>
       <body>{children}</body>
     </html>
   );
