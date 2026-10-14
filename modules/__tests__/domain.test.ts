@@ -32,6 +32,7 @@ const buyer = (over: Partial<Buyer> = {}): Buyer => ({
   activeStatus: true,
   verificationStatus: "unverified",
   provenance: "simulated",
+  distanceKm: 12,
   requirements: {
     acceptedResidueTypes: ["straw"],
     minimumVolumeTonnes: 5,

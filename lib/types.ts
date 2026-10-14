@@ -78,6 +78,7 @@ export interface Buyer {
   activeStatus: boolean;
   verificationStatus: VerificationStatus;
   provenance: Provenance;
+  distanceKm: number;
   requirements: BuyerRequirement;
 }
 

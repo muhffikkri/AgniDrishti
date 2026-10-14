@@ -113,6 +113,7 @@
       "activeStatus": true,
       "verificationStatus": "unverified",
       "provenance": "simulated",
+      "distanceKm": 12,
       "requirements": {
         "acceptedResidueTypes": ["straw"],
         "minimumVolumeTonnes": 5,
@@ -136,6 +137,7 @@
       "activeStatus": true,
       "verificationStatus": "unverified",
       "provenance": "simulated",
+      "distanceKm": 28,
       "requirements": {
         "acceptedResidueTypes": ["straw"],
         "minimumVolumeTonnes": 3,
@@ -159,6 +161,7 @@
       "activeStatus": true,
       "verificationStatus": "unverified",
       "provenance": "simulated",
+      "distanceKm": 45,
       "requirements": {
         "acceptedResidueTypes": ["straw"],
         "minimumVolumeTonnes": 10,
