@@ -1,0 +1,180 @@
+{
+  "metadata": {
+    "mode": "simulated",
+    "region": "Illustrative pilot region",
+    "asOf": "2026-10-15",
+    "warning": "All records are illustrative and not field-verified."
+  },
+  "riskZones": [
+    {
+      "id": "ZONE-001",
+      "name": "Illustrative North Zone",
+      "adminRegion": "North District",
+      "riskScore": 0.83,
+      "riskBand": "elevated",
+      "provenance": "simulated",
+      "methodVersion": "demo-rules-v0",
+      "horizonStart": "2026-10-10",
+      "horizonEnd": "2026-10-16",
+      "uncertainty": "medium",
+      "reviewStatus": "pending",
+      "cropContext": "wheat"
+    },
+    {
+      "id": "ZONE-002",
+      "name": "Central Zone",
+      "adminRegion": "Central District",
+      "riskScore": 0.52,
+      "riskBand": "moderate",
+      "provenance": "simulated",
+      "methodVersion": "demo-rules-v0",
+      "horizonStart": "2026-10-10",
+      "horizonEnd": "2026-10-16",
+      "uncertainty": "medium",
+      "reviewStatus": "pending",
+      "cropContext": "wheat"
+    },
+    {
+      "id": "ZONE-003",
+      "name": "South Zone",
+      "adminRegion": "South District",
+      "riskScore": 0.21,
+      "riskBand": "lower",
+      "provenance": "simulated",
+      "methodVersion": "demo-rules-v0",
+      "horizonStart": "2026-10-10",
+      "horizonEnd": "2026-10-16",
+      "uncertainty": "medium",
+      "reviewStatus": "pending",
+      "cropContext": "wheat"
+    }
+  ],
+  "residues": [
+    {
+      "id": "RES-001",
+      "farmerId": "F-100",
+      "zoneId": "ZONE-001",
+      "cropType": "wheat",
+      "residueType": "straw",
+      "fieldAreaValue": 10,
+      "fieldAreaUnit": "acres",
+      "harvestDate": "2026-10-05",
+      "condition": "dry",
+      "handlingForm": "loose",
+      "estimatedQuantityTonnes": 6,
+      "measuredQuantityTonnes": null,
+      "availableFrom": "2026-10-07",
+      "availableUntil": "2026-10-17",
+      "provenance": "simulated",
+      "verificationStatus": "unverified"
+    }
+  ],
+  "buyers": [
+    {
+      "id": "B-001",
+      "name": "AgriFeed Co",
+      "buyerType": "local_fodder",
+      "location": "North Market",
+      "serviceArea": "ZONE-001",
+      "activeStatus": true,
+      "verificationStatus": "unverified",
+      "provenance": "simulated",
+      "requirements": {
+        "acceptedResidueTypes": ["straw"],
+        "minimumVolumeTonnes": 5,
+        "maximumVolumeTonnes": 20,
+        "acceptedConditions": ["dry"],
+        "acceptedHandlingForms": ["loose", "baled"],
+        "priceValue": 1200,
+        "priceCurrency": "INR",
+        "priceUnit": "tonne",
+        "priceBasis": "farm-gate",
+        "validFrom": "2026-10-01",
+        "validUntil": "2026-10-30"
+      }
+    },
+    {
+      "id": "B-002",
+      "name": "GreenBio Aggregator",
+      "buyerType": "aggregator",
+      "location": "Central Hub",
+      "serviceArea": "ZONE-002",
+      "activeStatus": true,
+      "verificationStatus": "unverified",
+      "provenance": "simulated",
+      "requirements": {
+        "acceptedResidueTypes": ["straw"],
+        "minimumVolumeTonnes": 3,
+        "maximumVolumeTonnes": 40,
+        "acceptedConditions": ["dry"],
+        "acceptedHandlingForms": ["baled"],
+        "priceValue": 1500,
+        "priceCurrency": "INR",
+        "priceUnit": "tonne",
+        "priceBasis": "delivered",
+        "validFrom": "2026-10-01",
+        "validUntil": "2026-10-30"
+      }
+    },
+    {
+      "id": "B-003",
+      "name": "EcoEnergy Plant",
+      "buyerType": "biomass_processor",
+      "location": "Industrial Park",
+      "serviceArea": "ZONE-001",
+      "activeStatus": true,
+      "verificationStatus": "unverified",
+      "provenance": "simulated",
+      "requirements": {
+        "acceptedResidueTypes": ["straw"],
+        "minimumVolumeTonnes": 10,
+        "maximumVolumeTonnes": 100,
+        "acceptedConditions": ["dry", "slightly_damp"],
+        "acceptedHandlingForms": ["baled"],
+        "priceValue": 1350,
+        "priceCurrency": "INR",
+        "priceUnit": "tonne",
+        "priceBasis": "delivered",
+        "validFrom": "2026-10-01",
+        "validUntil": "2026-10-30"
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TX-001",
+      "residueRecordId": "RES-001",
+      "buyerId": "B-001",
+      "offerPrice": 1200,
+      "currency": "INR",
+      "estimatedQuantityTonnes": 6,
+      "measuredQuantityTonnes": null,
+      "acceptedQuantityTonnes": 6,
+      "paidQuantityTonnes": 0,
+      "status": "Offered",
+      "pickupScheduledAt": null,
+      "collectedAt": null,
+      "paymentConfirmedAt": null,
+      "provenance": "simulated",
+      "events": [
+        {
+          "fromStatus": null,
+          "toStatus": "Draft",
+          "timestamp": "2026-10-07T09:00:00Z",
+          "actor": "operator",
+          "note": "Created demo transaction",
+          "provenance": "simulated"
+        },
+        {
+          "fromStatus": "Draft",
+          "toStatus": "Offered",
+          "timestamp": "2026-10-07T10:00:00Z",
+          "actor": "operator",
+          "note": "Offer extended to farmer",
+          "provenance": "simulated"
+        }
+      ]
+    }
+  ],
+  "logistics": []
+}
