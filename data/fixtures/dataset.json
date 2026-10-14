@@ -12,6 +12,12 @@
       "adminRegion": "North District",
       "riskScore": 0.83,
       "riskBand": "elevated",
+      "signals": [
+        { "label": "Thermal detections (7 days)", "value": "4", "provenance": "simulated" },
+        { "label": "Crop context", "value": "wheat", "provenance": "derived" },
+        { "label": "Days since harvest", "value": "3", "provenance": "derived" },
+        { "label": "Weather", "value": "dry and windy", "provenance": "simulated" }
+      ],
       "provenance": "simulated",
       "methodVersion": "demo-rules-v0",
       "horizonStart": "2026-10-10",
@@ -26,6 +32,11 @@
       "adminRegion": "Central District",
       "riskScore": 0.52,
       "riskBand": "moderate",
+      "signals": [
+        { "label": "Thermal detections (7 days)", "value": "1", "provenance": "simulated" },
+        { "label": "Crop context", "value": "wheat", "provenance": "derived" },
+        { "label": "Harvest proximity", "value": "8 days", "provenance": "derived" }
+      ],
       "provenance": "simulated",
       "methodVersion": "demo-rules-v0",
       "horizonStart": "2026-10-10",
@@ -40,6 +51,11 @@
       "adminRegion": "South District",
       "riskScore": 0.21,
       "riskBand": "lower",
+      "signals": [
+        { "label": "Thermal detections (7 days)", "value": "0", "provenance": "simulated" },
+        { "label": "Crop context", "value": "wheat", "provenance": "derived" },
+        { "label": "Harvest proximity", "value": "12 days", "provenance": "derived" }
+      ],
       "provenance": "simulated",
       "methodVersion": "demo-rules-v0",
       "horizonStart": "2026-10-10",
@@ -47,6 +63,24 @@
       "uncertainty": "medium",
       "reviewStatus": "pending",
       "cropContext": "wheat"
+    },
+    {
+      "id": "ZONE-004",
+      "name": "East Zone",
+      "adminRegion": "East District",
+      "riskScore": null,
+      "riskBand": "unknown",
+      "signals": [
+        { "label": "Thermal detections (7 days)", "value": "unavailable", "provenance": "simulated" },
+        { "label": "Crop context", "value": "unknown", "provenance": "simulated" }
+      ],
+      "provenance": "simulated",
+      "methodVersion": "demo-rules-v0",
+      "horizonStart": "2026-10-10",
+      "horizonEnd": "2026-10-16",
+      "uncertainty": "high",
+      "reviewStatus": "pending",
+      "cropContext": "unknown"
     }
   ],
   "residues": [

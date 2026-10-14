@@ -32,3 +32,12 @@ export function bandFromScore(score: number): RiskBand {
   if (score >= 0.4) return "moderate";
   return "lower";
 }
+
+export function recommendedAction(band: RiskBand): string {
+  return {
+    elevated: "Prioritise preventive outreach and confirm context with a field partner.",
+    moderate: "Schedule outreach and monitor the next assessment horizon.",
+    lower: "Routine monitoring only.",
+    unknown: "Collect additional data before making a risk assessment.",
+  }[band];
+}

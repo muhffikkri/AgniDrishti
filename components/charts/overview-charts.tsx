@@ -18,7 +18,7 @@ const axis = { stroke: "#8493A8", fontSize: 11 };
 export function RiskScoreChart({ zones }: { zones: RiskZone[] }) {
   const data = zones.map((z) => ({
     name: z.id,
-    score: Math.round(z.riskScore * 100),
+    score: z.riskScore === null ? 0 : Math.round(z.riskScore * 100),
     band: z.riskBand,
   }));
 

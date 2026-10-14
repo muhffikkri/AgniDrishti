@@ -100,7 +100,9 @@ export default function OverviewPage() {
               </div>
               <dl className="grid grid-cols-2 gap-2 text-meta">
                 <dt className="text-ink-muted">Score</dt>
-                <dd className="num text-right">{activeZone.riskScore.toFixed(2)} (0–1)</dd>
+                <dd className="num text-right">
+                  {activeZone.riskScore !== null ? `${activeZone.riskScore.toFixed(2)} (0–1)` : "Unknown"}
+                </dd>
                 <dt className="text-ink-muted">Horizon</dt>
                 <dd className="text-right">
                   {activeZone.horizonStart} → {activeZone.horizonEnd}

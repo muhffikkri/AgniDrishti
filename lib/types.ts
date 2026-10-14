@@ -10,12 +10,19 @@ export interface FixtureMetadata {
   warning: string;
 }
 
+export interface RiskSignal {
+  label: string;
+  value: string;
+  provenance: Provenance;
+}
+
 export interface RiskZone {
   id: string;
   name: string;
   adminRegion: string;
-  riskScore: number;
+  riskScore: number | null;
   riskBand: RiskBand;
+  signals: RiskSignal[];
   provenance: Provenance;
   methodVersion: string;
   horizonStart: string;
