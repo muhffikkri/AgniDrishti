@@ -7,7 +7,7 @@ export function Card({
 }: {
   className?: string;
   children: React.ReactNode;
-  as?: any;
+  as?: React.ElementType;
 }) {
   return <Tag className={cn("panel p-4", className)}>{children}</Tag>;
 }
